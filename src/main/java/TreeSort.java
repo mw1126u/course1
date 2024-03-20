@@ -25,28 +25,28 @@ public class TreeSort {
       head = newNode;
     } else {
       Node current = head;
-      Node parent = null;
 
     while(true){
-      parent = current;
       // check if new nod should go left or right
       if (data < current.data){
-        current = current.left_child;
-        if (current == null){
-          parent.left_child = newNode;
+        if (current.left_child == null){
+          current.left_child = newNode;
           return;
         }
+        current = current.left_child;
+          
+        }
         else {
-          current = current.right_child;
-          if (current == null){
-            parent.right_child = newNode;
+          if (current.right_child == null){
+            current.right_child = newNode;
             return;
+          }
+          current = current.right_child;
           }
         }
       }
     }
-  }
-  }
+ 
 
   public void inOrderTraversal(Node current){
     if (current != null){

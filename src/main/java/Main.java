@@ -17,7 +17,7 @@ public static void main ( String[] args){
 
 
       // Displaying the sorted arrays
-     
+     treesort.inOrderTraversal(treesort.head);
      
     }
   }
