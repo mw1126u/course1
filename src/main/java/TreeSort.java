@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class TreeSort {
 
 //Node class representing each element in the linked list
@@ -46,16 +49,19 @@ public class TreeSort {
         }
       }
     }
- 
 
-  public void inOrderTraversal(Node current){
-    if (current != null){
-      inOrderTraversal(current.left_child);
-      System.out.println(current.data);
-      inOrderTraversal(current.right_child);
+  //Method to perform in-order traversal of the tree
+  public List<Integer> inOrderTraversal(Node current) {
+    List<Integer> sortedList = new ArrayList<Integer>();
+
+    if (current != null) {
+      sortedList.addAll(inOrderTraversal(current.left_child));
+      sortedList.add(current.data);
+      sortedList.addAll(inOrderTraversal(current.right_child));
     }
+
+    return sortedList;
   }
 }
-
 
   

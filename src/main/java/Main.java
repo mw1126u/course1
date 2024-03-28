@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Main{
 
@@ -9,15 +7,14 @@ public static void main ( String[] args){
       //Create an instance of the Heapsort class and use it to create the Heap
       TreeSort treesort = new TreeSort();
 
-        treesort.addChild(4);
-        treesort.addChild(2);
-        treesort.addChild(3);
-        treesort.addChild(5);
-        treesort.addChild(1);
+      int[] array = {8,9,10,4,2,1,7,5,3,6};
 
+      for (int i = 0; i < array.length; i++){
+        treesort.addChild(array[i]);
+      } 
 
       // Displaying the sorted arrays
-     treesort.inOrderTraversal(treesort.head);
+     System.out.println(treesort.inOrderTraversal(treesort.head));
      
     }
   }
