@@ -1,0 +1,10 @@
+@Test
+public void () {
+
+          TreeSort treeSort = new TreeSort();
+          int[] inputArray = {4, 2, 3, 5, 1};
+          Arrays.stream(inputArray).forEach(treeSort::addChild);
+          int[] expectedSortedArray = {1, 2, 3, 4, 5};
+          assertEquals(Arrays.toString(expectedSortedArray), treeSort.inOrderTraversal(treeSort.head).toString());
+  
+}

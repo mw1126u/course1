@@ -1,0 +1,8 @@
+@Test
+public void () {
+
+  ArrayList<Integer> original = treesort.inOrderTraversal(treesort.head);
+  ArrayList<Integer> sorted = new ArrayLis<Integer>(original);
+  Collections.sort(sorted);
+  Assert.assertEquals ("List is not sorted", sorted, original);
+}
